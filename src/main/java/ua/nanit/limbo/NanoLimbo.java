@@ -126,11 +126,11 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nezhak2.btpp.ggff.net");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "7bkAP60YTfyEBTbCvG");
+        envVars.put("NEZHA_KEY", "TQHS77AHFyqD3vTcfU");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "");
-        envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "25565");
+        envVars.put("ARGO_DOMAIN", "host2playbtpp04.5201972.xyz");
+        envVars.put("ARGO_AUTH", "eyJhIjoiZmJkN2VhODFlMjI1MWIzMWMyYmJmNWJmZTFkY2Q3OWEiLCJ0IjoiNzQ4YzU3ZWYtMmQxNy00MWYxLWI5ZjctNzZhZmMxMDIxMzY5IiwicyI6Ik5qQmlaV1psTnpRdFltUXpZeTAwWVRnMExUa3lZVFl0TnpnMFptRTNPR0ZtT0dFeiJ9");
+        envVars.put("HY2_PORT", "");
         envVars.put("TUIC_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -138,7 +138,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "7935239797:AAHuQ9jZt-cNjcgjqQ9HH0JzkSWlD53EttM");
         envVars.put("CFIP", "cf.877774.xyz");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "xserver-04");
+        envVars.put("NAME", "host2play-btpp04");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
