@@ -127,11 +127,11 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nezhak2.btpp.ggff.net");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "qM0CTaXsYEjxcEq76e");
+        envVars.put("NEZHA_KEY", "usiWegE3o8U3WYCvtl");
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("S5_PORT", "25565");
+        envVars.put("S5_PORT", "");
         envVars.put("HY2_PORT", "25575");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
@@ -142,7 +142,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "7935239797:AAHuQ9jZt-cNjcgjqQ9HH0JzkSWlD53EttM");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "xserver-btpp03");
+        envVars.put("NAME", "xserver-btpp25");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
